@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 const UserModel = require('./models/user')
-const ProfileModel = require('./models/profile')
+const PersonModel = require('./models/Person')
 
 const sequelize = new Sequelize('sequelize', 'homestead', 'secret', {
   host: 'localhost',

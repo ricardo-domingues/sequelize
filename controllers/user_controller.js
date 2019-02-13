@@ -1,13 +1,14 @@
 const User = require('../models').User;
-const Profile = require('../models').Profile;
+const Person = require('../models').Person;
 
 module.exports = {
 
     all (req, res) {
-        User.findAll({include: [ Profile ]}).then(users => {
+        User.findAll({include: [ Person ]}).then(users => {
             res.status(200).json({data: users})
         })
         .catch((error) => {
+            console.log(error);
             res.status(500).json({error: error})
         })
     },
@@ -22,7 +23,7 @@ module.exports = {
     },
 
     show (req, res) {
-        User.findByPk(req.params.id).then((user) => {
+        User.findByPk(req.params.id, {include: [Person]}).then((user) => {
             res.status(200).json({data: user})
         }).catch((error) => {
             res.status(500).json({message: error})

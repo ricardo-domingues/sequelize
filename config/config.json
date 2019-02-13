@@ -1,10 +1,10 @@
 {
   "development": {
-    "username": "homestead",
-    "password": "secret",
+    "username": "root",
+    "password": "123456",
     "database": "sequelize",
     "host": "127.0.0.1",
-    "port": "33060",
+    "port": "3306",
     "dialect": "mysql"
   },
   "test": {

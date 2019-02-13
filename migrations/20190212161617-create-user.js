@@ -14,13 +14,15 @@ module.exports = {
       email: {
         type: Sequelize.STRING
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        // default: Sequelize.NOW
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        // default: Sequelize.NOW
       }
     });
   },
